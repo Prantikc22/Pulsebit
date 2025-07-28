@@ -1,0 +1,12 @@
+# Example Caddyfile for Pulsebit reverse proxy + HTTPS
+# Place this in your Caddy config directory and run `caddy run`
+# Replace analytics.yourdomain.com with your real domain
+
+analytics.yourdomain.com {
+    reverse_proxy localhost:3000
+    encode gzip
+    log {
+        output file /var/log/caddy/pulsebit_access.log
+        format single_field common_log
+    }
+}
