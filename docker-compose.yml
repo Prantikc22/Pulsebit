@@ -1,8 +1,7 @@
 ---
 services:
   umami:
-    build: .
-    image: pulsebit:latest
+    image: logicwerk/pulsebit:latest
     container_name: pulsebit
     ports:
       - "3000:3000"

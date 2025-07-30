@@ -14,11 +14,8 @@ if ! command -v docker compose &> /dev/null; then
   sudo apt-get install -y docker-compose-plugin
 fi
 
-# 2. Clone Pulsebit if not present
-if [ ! -d "Pulsebit" ]; then
-  git clone https://github.com/Prantikc22/Pulsebit.git
-fi
-cd Pulsebit/umami
+# 2. Download dependencies (if any) - not needed, just ensure docker-compose.yml and .env are present
+
 
 # 3. Copy .env.example to .env if not present
 if [ ! -f "../.env" ]; then
